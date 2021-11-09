@@ -1,0 +1,268 @@
+/*Xử lý mũi tên slide với màn hình <1300px*/
+
+@media screen and (min-width: 1200px) and (max-width: 1299px){
+    .container{
+        max-width: 90%;
+    }
+    .header .header__inner .col-lg-2{
+        max-width: calc(2.5/12*100%);
+        flex-basis: calc(2.5/12*100%);
+    }
+
+    .header .header__inner .col-lg-6{
+        max-width: calc(5.5/12*100%);
+        flex-basis: calc(5.5/12*100%);
+    }
+}
+
+/*Xử lý màn hình desktop small*/
+@media screen and (max-width: 1199px){
+    
+    .product-box .owl-carousel .owl-nav button.owl-next, .news-box .owl-carousel .owl-nav button.owl-next, .brand-box .owl-carousel .owl-nav button.owl-next{
+        right: 0;
+    }
+
+    .product-box .owl-carousel .owl-nav button.owl-prev, .news-box .owl-carousel .owl-nav button.owl-prev, .brand-box .owl-carousel .owl-nav button.owl-prev{
+        left: 0;
+    }
+
+    .header .header__top-bar .header__top-bar--left,
+    .header .header__top-bar .header__top-bar--right{
+        text-align: center;
+    }
+
+    .header .header__inner .row>div:nth-of-type(1){
+        order: 1;
+       
+    }
+
+    .header .header__inner .row>div:nth-of-type(2){
+        order: 2;
+        text-align: center;
+    }
+
+    .header .header__inner .row>div:nth-of-type(3){
+        order: 4;
+    }
+
+    .header .header__inner .row>div:nth-of-type(4){
+        order: 3;
+    }
+
+    .header .header__inner .header__inner--cart{
+        justify-content: center;
+    }
+
+    .header .menu-toggle{
+        display: flex;
+        align-items: center;
+    }
+
+    .header .menu-toggle label{
+        display: block;
+        border: 1px solid var(--primary-color);
+        text-align: center;
+        padding: 5px 10px;
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    .header #toggle-menu:checked ~ .primary-menu{
+        /* display: block !important; */
+        height: 100vh !important;
+    }
+
+    .header .primary-menu ul li{
+        display: block !important;
+    }
+
+    .header .primary-menu{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 100%;
+        z-index: 150;
+        background: var(--primary-color-opacity);
+        height: 0!important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        overflow: hidden;
+        transition: height 0.4s linear;
+        -webkit-transition: height 0.4s linear;
+        -moz-transition: height 0.4s linear;
+        -ms-transition: height 0.4s linear;
+        -o-transition: height 0.4s linear;
+    }
+
+    .header .primary-menu ul{
+        flex-grow: 1;
+    }
+
+    .header .primary-menu a{
+        color: #fff !important;
+    }
+
+    .header .header__inner{
+        position: relative;
+    }
+
+    .header .header__inner .primary-menu>ul>li+li::before{
+        display: none;
+    }
+
+    .header .header__inner .primary-menu>ul>li>a{
+        padding: 10px 15px !important;
+    }
+
+    .header .header__inner .primary-menu>ul>li+li>a{
+        border-top: 1px solid #fff;
+    }
+
+    .header .header__inner .primary-menu>ul>li{
+        padding: 0;
+    }
+
+    .header .header__inner .primary-menu>ul>li>a{
+        display: block;
+    }
+
+    .header .header__inner .primary-menu>ul>li ul{
+        position: static;
+        background: #1636c6b8;
+        border-top: 1px solid #fff;
+    }
+
+    .header .header__inner .primary-menu>ul>li ul li+li a{
+        border-top: 1px solid #fff;
+    }
+
+    .header .header__inner .primary-menu>ul>li:hover ul{
+        display: none !important;
+    }
+
+    .header .header__inner .primary-menu>ul>li:focus-within ul{
+        display: block !important;
+    }
+}
+
+/*Màn hình ipad, máy tính bảng*/
+@media screen and (max-width: 991px){
+    .tab-content{
+        padding-bottom: 80%;
+    }
+
+    .support-box .support-box__item{
+        margin-bottom: 10px;
+    }
+
+    .footer .footer__networks .footer__networks--socials li a{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .gallery-box img{
+        object-fit: unset;
+        object-position: unset;
+        height: auto;
+    }
+    .gallery-box .gallery-box--large{
+        height: unset;
+    }
+
+    .product-filters .product-filters--flex{
+        flex-wrap: nowrap;
+    }
+
+    .product-filters .product-filters--flex .product-filters__item{
+        display: flex;
+    }
+
+    .product-filters .product-filters--flex .product-filters__item:first-child,
+    .product-filters .product-filters--flex .product-filters__item>*{
+        flex-grow: 1;
+    }
+
+    .product-filters .product-filters--flex:not(.last) .product-filters__item>*{
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .product-filters .product-filters--flex.last{
+        justify-content: unset;
+    }
+}
+
+
+/*Màn hình điện thoại*/
+@media screen and (max-width: 767px){
+    .header .header__top-bar .header__top-bar--left>li, 
+    .header .header__top-bar .header__top-bar--right>li{
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .header .header__inner .row>div:nth-of-type(2){
+        margin-bottom: 10px;
+    }
+
+    .header .header__inner .row>div:nth-of-type(2) img{
+        max-height: 55px;
+        width: auto;
+    }
+
+    .tab-nav ul li{
+        width: 49%;
+        margin-bottom: 5px;
+    }
+
+    .tab-nav ul li label{
+        font-size: 0.9rem;
+    }
+
+    .tab-content{
+        padding-bottom: 100%;
+    }
+
+    .footer .footer--nav ul{
+        flex-wrap: wrap;
+    }
+
+    .footer .footer--nav ul li{
+        margin-bottom: 7px;
+    }
+
+    .content-order{
+        order: 1
+    }
+    .sidebar-order{
+        order: 2;
+    }
+
+    .category-page .sidebar-item img{
+        width: 100%;
+        height: auto;
+    }
+
+    .product-filters .product-filters--flex{
+        justify-content: center !important;
+    }
+
+    .product-filters>.row>*{
+        margin-bottom: 10px;
+    }
+
+    .product-pagination .pagination--text{
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .product-pagination .product-pagination__lists{
+        text-align: center;
+    }
+    .banner-breadcrumbs ul{
+        display: block;
+    }
+}
